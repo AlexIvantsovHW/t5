@@ -25,7 +25,7 @@ const DataGenerator = () => {
         setIsLoading(true);
         setFakerSeed(languageModule, seed);
         const generator = new HumanMisspellingGenerator(languageModule);
-        const data: UserData[] = Array.from({ length: 20 }, (_, index) =>
+        const data: UserData[] = Array.from({ length: 2000 }, (_, index) =>
             generateUserData(languageModule, index + 1)
         ).map(({ index, identifier, name, address, phone }) => ({
             ...generator.generate(errorCount, { name, address, phone }),
